@@ -26,7 +26,6 @@ jobs:
         poetry install --no-interaction --no-ansi
     - name: Run Tests
       run: |
-        cd src
         coverage run --source=num_to_rus.converter -m unittest
     - name: Coveralls
       uses: AndreMiras/coveralls-python-action@develop
