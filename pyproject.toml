@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "num_to_rus"
+version = "1.0.0"
+description = "Package to convert numbers to russian text"
+authors = ["artemowkin <artyom.groshev2017@gmail.com>"]
+license = "GPL-3.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+coverage = "^6.3.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
