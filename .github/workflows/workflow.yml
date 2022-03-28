@@ -24,8 +24,9 @@ jobs:
         pip install poetry
         poetry config virtualenvs.create false
         poetry install --no-interaction --no-ansi
-    - name: Run Tests
+    - name: Generate Report
       run: |
         coverage run --source=num_to_rus.converter -m unittest
-    - name: Codecov
+        coverage xml
+    - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2
