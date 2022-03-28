@@ -28,7 +28,6 @@ jobs:
       run: |
         cd src
         coverage run --source=num_to_rus.converter -m unittest
-        coveralls
     - name: Coveralls
       uses: AndreMiras/coveralls-python-action@develop
       with:
