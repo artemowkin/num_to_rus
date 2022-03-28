@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
@@ -25,8 +25,22 @@ jobs:
         poetry config virtualenvs.create false
         poetry install --no-interaction --no-ansi
     - name: Run Tests
-      run: tox
+      run: |
+        cd src
+        coverage run --source=num_to_rus.converter -m unittest
+        coveralls
     - name: Coveralls
-      uses: coverallsapp/github-action@master
+      uses: AndreMiras/coveralls-python-action@develop
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        parallel: true
+        flag-name: Unit Test
+
+  coveralls_finish:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Coveralls Finished
+      uses: AndreMiras/coveralls-python-action@develop
+      with:
+        parallel-finished: true
