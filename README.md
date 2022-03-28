@@ -1,5 +1,7 @@
 # num\_to\_rus
 
+[![codecov](https://codecov.io/gh/artemowkin/num_to_rus/branch/main/graph/badge.svg?token=UO7R3HM5FH)](https://codecov.io/gh/artemowkin/num_to_rus)
+
 Небольшая библиотека, позволяющая переводить числа в слова на русском
 языке
 
