@@ -27,18 +27,5 @@ jobs:
     - name: Run Tests
       run: |
         coverage run --source=num_to_rus.converter -m unittest
-    - name: Coveralls
-      uses: AndreMiras/coveralls-python-action@develop
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        parallel: true
-        flag-name: Unit Test
-
-  coveralls_finish:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - name: Coveralls Finished
-      uses: AndreMiras/coveralls-python-action@develop
-      with:
-        parallel-finished: true
+    - name: Codecov
+      uses: codecov/codecov-action@v2

@@ -1,7 +1,5 @@
 # num\_to\_rus
 
-[![Coverage Status](https://coveralls.io/repos/github/artemowkin/num_to_rus/badge.svg?branch=main)](https://coveralls.io/github/artemowkin/num_to_rus?branch=main)
-
 Небольшая библиотека, позволяющая переводить числа в слова на русском
 языке
 
