@@ -38,3 +38,4 @@ python -m unittest
 ## Лицензия
 
 Проект находится под лицензией [GPL-3.0](LICENSE.txt)
+
