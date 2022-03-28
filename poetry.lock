@@ -11,8 +11,8 @@ toml = ["tomli"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.10"
-content-hash = "63b4003549f585f52574aa63b523635c62ddec114455638374d0285d011b5849"
+python-versions = "^3.7"
+content-hash = "a742001e06196354f6d86e1e141b3e974bc52edc02e4bbad11fac39d399497bf"
 
 [metadata.files]
 coverage = [
