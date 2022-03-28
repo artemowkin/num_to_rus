@@ -16,7 +16,7 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-        "Operation System :: OS Independent",
+        "Operating System :: OS Independent",
     ],
     package_dir={"": "."},
     packages=setuptools.find_packages(where="."),
