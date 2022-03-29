@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="num_to_rus",
-    version="1.0.0",
+    version="1.1.0",
     author="Artemowkin",
     author_email="artyom.groshev2017@gmail.com",
     description="Небольшая библиотека для перевода чисел в слова русского языка",
