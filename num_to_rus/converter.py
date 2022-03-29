@@ -32,16 +32,21 @@ class Converter:
         число больше 999999999999, то вернется 'слишком много'
 
         """
+        minus = ''
+        if number < 0:
+            minus = 'минус '
+            number = -number
+
         if len(str(number)) < 4:
             if number == 0 and return_zero: return 'ноль'
             hundreds_text = self._convert_hundreds(number, digit_class)
-            return hundreds_text
+            return minus + hundreds_text
         elif len(str(number)) < 7:
-            return self._get_thousands(number)
+            return minus + self._get_thousands(number)
         elif len(str(number)) < 10:
-            return self._get_millions(number)
+            return minus + self._get_millions(number)
         elif len(str(number)) < 13:
-            return self._get_billions(number)
+            return minus + self._get_billions(number)
         else:
             return 'слишком много'
 

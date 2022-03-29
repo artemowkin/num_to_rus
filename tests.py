@@ -208,3 +208,8 @@ class ConverterTestCase(TestCase):
         """Тест с числом 101000000000"""
         text = self.conv.convert(101000000000)
         self.assertEqual(text, 'сто один миллиард')
+
+    def test_minus_532(self):
+        """Тест с отрицательным числом: 532"""
+        text = self.conv.convert(-532)
+        self.assertEqual(text, 'минус пятьсот тридцать два')
